@@ -1,9 +1,13 @@
 import streamlit as st
-import os
+import streamlit.components.v1 as components
 
 st.set_page_config(layout="wide")
 
-html_file = open("public/index.html", "r", encoding="utf-8")
-source_code = html_file.read()
+with open("public/index.html", "r", encoding="utf-8") as f:
+    html_code = f.read()
 
-st.markdown(source_code, unsafe_allow_html=True)
+components.html(
+    html_code,
+    height=1000,
+    scrolling=True
+)
