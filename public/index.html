@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Cormorant+Garamond:wght@600;700&family=Poppins:wght@300;400;500;600;700&family=DM+Mono:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
   <meta charset="UTF-8" />
- <meta name="viewport" content="width=3840" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Anvoxa — Sign in</title>
 
   <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
@@ -27,7 +30,7 @@
     .top-line {
       position: fixed;
       top: 0; left: 0; right: 0;
-      height: 3px;
+      height: 1.5px;
       background: linear-gradient(90deg, #a0620a, #D4A843, #a0620a);
       z-index: 99;
     }
@@ -52,8 +55,8 @@
     .left::before {
       content: '';
       position: absolute;
-      top: -120px; right: -120px;
-      width: 550px; height: 550px;
+      top: -60px; right: -60px;
+      width: 275px; height: 275px;
       background: radial-gradient(circle, rgba(212,168,67,0.15) 0%, transparent 60%);
       pointer-events: none;
     }
@@ -61,8 +64,8 @@
     .left::after {
       content: '';
       position: absolute;
-      bottom: -100px; left: -100px;
-      width: 400px; height: 400px;
+      bottom: -50px; left: -50px;
+      width: 200px; height: 200px;
       background: radial-gradient(circle, rgba(180,70,20,0.08) 0%, transparent 65%);
       pointer-events: none;
     }
@@ -70,13 +73,13 @@
     /* Logo — fixed top-left */
     .logo {
       position: absolute;
-      top: 48px; left: 64px;
+      top: 24px; left: 32px;
       z-index: 2;
       animation: fadeUp 0.5s 0.1s ease both;
     }
     .logo-name {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 62px;
+      font-size: 31px;
       font-weight: 700;
       letter-spacing: -2px;
       color: #F0EBE0;
@@ -85,35 +88,35 @@
     .logo-name span { color: #D4A843; }
     .logo-tag {
       font-family: 'DM Mono', monospace;
-      font-size: 20px;
-      letter-spacing: 3px;
+      font-size: 10px;
+      letter-spacing: 1.5px;
       text-transform: uppercase;
       color: rgba(240,235,224,0.3);
-      margin-top: 9px;
+      margin-top: 4.5px;
     }
 
     /* Publishers — fixed bottom-left */
     .publishers {
       position: absolute;
-      bottom: 52px; left: 64px;
+      bottom: 26px; left: 32px;
       z-index: 2;
       animation: fadeUp 0.5s 0.45s ease both;
     }
     .pub-label {
       font-family: 'DM Mono', monospace;
-      font-size: 20px;
-      letter-spacing: 2.5px;
+      font-size: 10px;
+      letter-spacing: 1.25px;
       text-transform: uppercase;
       color: rgba(255, 255, 255, 0.3);
-      margin-bottom: 16px;
+      margin-bottom: 8px;
     }
-    .pub-pills { display: flex; gap: 10px; flex-wrap: wrap; }
+    .pub-pills { display: flex; gap: 5px; flex-wrap: wrap; }
     .pub-pill {
       font-family: 'DM Mono', monospace;
-      font-size: 20px;
+      font-size: 10px;
       color: rgba(240,235,224,0.5);
       border: 1px solid rgba(212,168,67,0.25);
-      padding: 9px 22px;
+      padding: 4.5px 11px;
       letter-spacing: 1px;
       transition: all 0.2s;
     }
@@ -125,7 +128,7 @@
       top: 0; left: 0; right: 0; bottom: 0;
       display: flex;
       align-items: center;
-      padding: 0 64px;
+      padding: 0 32px;
       z-index: 2;
       animation: fadeUp 0.6s 0.25s ease both;
     }
@@ -134,29 +137,29 @@
     .eyebrow {
       display: flex;
       align-items: center;
-      gap: 14px;
+      gap: 7px;
       font-family: 'DM Mono', monospace;
-      font-size: 20px;
-      letter-spacing: 3px;
+      font-size: 10px;
+      letter-spacing: 1.5px;
       text-transform: uppercase;
       color: #D4A843;
-      margin-bottom: 28px;
+      margin-bottom: 14px;
     }
     .eyebrow::before {
       content: '';
-      width: 32px; height: 1.5px;
+      width: 16px; height: 1.5px;
       background: #D4A843;
       flex-shrink: 0;
     }
 
     .hero-title {
       font-family: 'Playfair Display', serif;
-      font-size: clamp(54px, 5.8vw, 88px);
+      font-size: clamp(27px, 5.8vw, 44px);
       font-weight: 900;
       line-height: 1.02;
-      letter-spacing: -2.5px;
+      letter-spacing: -1.25px;
       color: #F5F2EC;
-      margin-bottom: 28px;
+      margin-bottom: 14px;
     }
     .hero-title em {
       font-style: italic;
@@ -165,11 +168,11 @@
     }
 
     .hero-desc {
-      font-size: 16px;
+      font-size: 8px;
       line-height: 1.9;
       color: rgba(240,235,224,0.55);
       font-weight: 300;
-      max-width: 420px;
+      max-width: 210px;
     }
 
     /* ══════════════ RIGHT — white ══════════════ */
@@ -178,7 +181,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 0 96px;
+      padding: 0 48px;
       position: relative;
       overflow: hidden;
     }
@@ -187,8 +190,8 @@
     .right::before {
       content: '';
       position: absolute;
-      top: -60px; right: -60px;
-      width: 320px; height: 320px;
+      top: -30px; right: -30px;
+      width: 160px; height: 160px;
       background: radial-gradient(circle, rgba(212,168,67,0.06) 0%, transparent 65%);
       pointer-events: none;
     }
@@ -199,51 +202,51 @@
     }
 
     /* Sign in heading */
-    .form-head { margin-bottom: 48px; }
+    .form-head { margin-bottom: 24px; }
     .form-head h1 {
       font-family: 'Playfair Display', serif;
-      font-size: clamp(54px, 5.5vw, 80px);
+      font-size: clamp(27px, 5.5vw, 40px);
       font-weight: 900;
-      letter-spacing: -3px;
+      letter-spacing: -1.5px;
       line-height: 1;
       color: #111111;
-      margin-bottom: 14px;
+      margin-bottom: 7px;
     }
     .form-head h1 em {
       font-style: italic;
       color: #D4A843;
     }
     .form-sub {
-      font-size: 22px;
+      font-size: 11px;
       color: #888888;
       font-weight: 300;
       line-height: 1.6;
     }
 
     /* Role toggle */
-    .role-wrap { margin-bottom: 32px; }
+    .role-wrap { margin-bottom: 16px; }
     .role-lbl {
       font-family: 'DM Mono', monospace;
-      font-size: 20px;
-      letter-spacing: 2.5px;
+      font-size: 10px;
+      letter-spacing: 1.25px;
       text-transform: uppercase;
       color: #aaaaaa;
-      margin-bottom: 12px;
+      margin-bottom: 6px;
     }
     .role-toggle {
       display: flex;
       border: 1.5px solid #E0E0E0;
       background: #F8F8F8;
-      padding: 5px;
-      gap: 5px;
+      padding: 2.5px;
+      gap: 2.5px;
     }
     .role-btn {
       flex: 1;
-      padding: 16px;
+      padding: 8px;
       border: none;
       background: transparent;
       font-family: 'Poppins', sans-serif;
-      font-size: 20px;
+      font-size: 10px;
       font-weight: 500;
       color: #999999;
       cursor: pointer;
@@ -264,9 +267,9 @@
     .msg {
       display: none;
       font-family: 'DM Mono', monospace;
-      font-size: 20px;
-      padding: 14px 18px;
-      margin-bottom: 20px;
+      font-size: 10px;
+      padding: 7px 9px;
+      margin-bottom: 10px;
       line-height: 1.5;
       border-radius: 2px;
     }
@@ -279,13 +282,13 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 14px;
-      padding: 20px 28px;
+      gap: 7px;
+      padding: 10px 14px;
       background: #D4A843;
       color: #111111;
       border: none;
       font-family: 'Poppins', sans-serif;
-      font-size: 20px;
+      font-size: 10px;
       font-weight: 700;
       letter-spacing: 2px;
       text-transform: uppercase;
@@ -293,8 +296,8 @@
       position: relative;
       overflow: hidden;
       transition: all 0.2s;
-      box-shadow: 0 4px 28px rgba(212,168,67,0.3);
-      margin-bottom: 16px;
+      box-shadow: 0 2px 14px rgba(212,168,67,0.3);
+      margin-bottom: 8px;
     }
     .btn-google::after {
       content: '';
@@ -307,12 +310,12 @@
     .btn-google:hover {
       background: #BA8F2E;
       transform: translateY(-2px);
-      box-shadow: 0 10px 40px rgba(212,168,67,0.38);
+      box-shadow: 0 5px 20px rgba(212,168,67,0.38);
     }
 
     .hint {
       font-family: 'DM Mono', monospace;
-      font-size: 20px;
+      font-size: 10px;
       color: #070707;
       text-align: center;
       letter-spacing: 0.3px;
@@ -322,13 +325,13 @@
     .divider {
       display: flex;
       align-items: center;
-      gap: 16px;
-      margin: 32px 0;
+      gap: 8px;
+      margin: 16px 0;
     }
     .divider-line { flex: 1; height: 1px; background: #ececec; }
     .divider-text {
       font-family: 'DM Mono', monospace;
-      font-size: 15px;
+      font-size: 7.5px;
       letter-spacing: 2px;
       text-transform: uppercase;
       color: #817f7f;
@@ -336,7 +339,7 @@
 
     /* Footer */
     .footer-note {
-      font-size: 18px;
+      font-size: 9px;
       color: #aaaaaa;
       line-height: 2;
       font-weight: 300;
@@ -350,7 +353,7 @@
 
     /* Animations */
     @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(22px); }
+      from { opacity: 0; transform: translateY(11px); }
       to   { opacity: 1; transform: translateY(0); }
     }
     @keyframes fadeIn {
@@ -359,16 +362,16 @@
     }
 
     /* Responsive */
-    @media (max-width: 900px) {
+    @media (max-width: 450px) {
       html, body { overflow: auto; height: auto; }
       .layout { grid-template-columns: 1fr; height: auto; min-height: 100vh; }
       .left { height: 55vh; }
-      .logo { top: 36px; left: 36px; }
-      .publishers { bottom: 36px; left: 36px; }
-      .hero-center { padding: 0 36px; }
-      .right { padding: 64px 36px; }
-      .hero-title { font-size: 48px; }
-      .form-head h1 { font-size: 48px; }
+      .logo { top: 18px; left: 18px; }
+      .publishers { bottom: 18px; left: 18px; }
+      .hero-center { padding: 0 18px; }
+      .right { padding: 32px 18px; }
+      .hero-title { font-size: 24px; }
+      .form-head h1 { font-size: 24px; }
     }
     /* ===== subtle production scaling ===== */
 body {
