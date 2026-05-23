@@ -1,13 +1,12 @@
 import streamlit as st
-import streamlit.components.v1 as components
 
 st.set_page_config(layout="wide")
 
-with open("public/index.html", "r", encoding="utf-8") as f:
-    html_code = f.read()
-
-components.html(
-    html_code,
-    height=1000,
-    scrolling=True
-)
+st.markdown("""
+<iframe
+    src="https://rawcdn.githack.com/yrpsachdeva/anvoxa/main/public/index.html"
+    width="100%"
+    height="1000"
+    style="border:none;">
+</iframe>
+""", unsafe_allow_html=True)
