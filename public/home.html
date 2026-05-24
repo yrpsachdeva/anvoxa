@@ -2127,14 +2127,6 @@ img:hover{
 
 <style>
 
-
-
-<style>
-
-
-
-<style>
-
 :root{
   --amber:#e7d8bf !important;
   --amber-deep:#cdbb9e !important;
@@ -3068,8 +3060,9 @@ section{
 <script>
 document.addEventListener('DOMContentLoaded',()=>{
 
-  // reveal animations
-  const revealItems=document.querySelectorAll('section, .what-card, .hero, .service-card, .card');
+  // reveal animations — only on cards, NOT whole sections
+  // (sections hidden via opacity:0 make scroll targets invisible)
+  const revealItems=document.querySelectorAll('.what-card, .service-card, .card');
   revealItems.forEach(el=>el.classList.add('reveal-text'));
 
   const observer=new IntersectionObserver((entries)=>{
@@ -3346,6 +3339,12 @@ body  { padding-left: 0 !important; }
   text-decoration:none; transition:background .2s;
 }
 .svc-drop-cta:hover { background:#C97B20; }
+
+/* ── Ensure buttons are always clickable ── */
+button, a.btn, .btn, .nav-cta, .btn-ghost, .btn-primary, .nav-link, .svc-item {
+  pointer-events: all !important;
+}
+
 </style>
 
 <script>
